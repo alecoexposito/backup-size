@@ -32,8 +32,8 @@ def do_main():
                 # getting size in bytes
                 sum += os.path.getsize(file)
         sum_mb = sum / (1024*1024)
-        print("size: " + str(sum_mb))
-        print("folder size: " + str(folder_size))
+        print('size: ' + str(sum_mb))
+        print('folder size: ' + str(folder_size))
 
         if sum_mb >= folder_size:
             delete_files()
