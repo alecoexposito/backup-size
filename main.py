@@ -6,7 +6,7 @@ root_path = '/home/zurikato/video-backup/'
 # root_path = '/media/aleco/DATOS/Films/peliculas/'
 
 
-folder_size = total_size / len(directories)
+folder_size = 0
 print "folder size: ", folder_size
 
 def sorted_ls(path):
@@ -22,7 +22,7 @@ def do_main():
     for f in os.listdir(root_path):
         if os.path.isdir(root_path + f):
             directories.append(root_path + f)
-
+    folder_size = total_size / len(directories)
     for d in directories:
         print d
         sum = 0
