@@ -1,7 +1,7 @@
 import os
 
 directories = []
-total_size = 20*1024
+total_size = 1*1024
 root_path = '/home/zurikato/video-backup/'
 # root_path = '/media/aleco/DATOS/Films/peliculas/'
 
