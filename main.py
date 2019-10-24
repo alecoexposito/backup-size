@@ -13,8 +13,8 @@ def sorted_ls(path):
     mtime = lambda f: os.stat(os.path.join(path, f)).st_mtime
     return list(sorted(os.listdir(path), key=mtime))
 
-def delete_files():
-    del_list = sorted_ls(root_path)[0:60]
+def delete_files(directory):
+    del_list = sorted_ls(directory)[0:60]
     for dfile in del_list:
         os.remove(root_path + dfile)
 
@@ -36,6 +36,6 @@ def do_main():
         print('folder size: ' + str(folder_size))
 
         if sum_mb >= folder_size:
-            delete_files()
+            delete_files(d)
 
 do_main()
