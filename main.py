@@ -16,7 +16,7 @@ def sorted_ls(path):
 def delete_files(directory):
     del_list = sorted_ls(directory)[0:60]
     for dfile in del_list:
-        os.remove(directory + dfile)
+        os.remove(directory + '/' + dfile)
 
 def do_main():
     for f in os.listdir(root_path):
